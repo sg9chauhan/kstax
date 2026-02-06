@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K.S. Tax | Premium Canadian Accounting & Tax Strategies</title>
-    <!-- Tailwind CSS (Styling Framework) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         
-        /* Navigation Glass Effect */
+        /* Navigation Glass Effect - Z-Index boosted to 100 */
         .glass-nav {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
@@ -65,13 +62,10 @@
 </head>
 <body class="bg-[#fcfdfe] text-slate-900 antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav">
+    <nav class="fixed w-full z-[100] glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-24 items-center">
-                <!-- Logo Home Link -->
                 <div class="flex items-center space-x-4 cursor-pointer bump" onclick="showPage('home')">
-                    <!-- Updated Logo Image -->
                     <img src="../assets/logo.png" alt="K.S. Tax Logo" class="h-[52px] w-auto object-contain">
                     <div class="flex flex-col text-left">
                         <span class="text-2xl font-black tracking-tight text-slate-900 leading-none uppercase">K.S. TAX</span>
@@ -79,7 +73,6 @@
                     </div>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden lg:flex space-x-10 font-bold text-slate-600">
                     <button onclick="showPage('home')" class="nav-link transition text-sm">Home</button>
                     <button onclick="showPage('file-taxes')" class="text-red-600 hover:text-red-700 transition text-sm font-black uppercase tracking-wider border-2 border-red-100 bg-red-50 px-5 py-2.5 rounded-xl">File 2025</button>
@@ -89,7 +82,6 @@
                     <button onclick="showPage('contact')" class="nav-link transition text-sm text-slate-400">Contact</button>
                 </div>
 
-                <!-- Call Button -->
                 <div class="flex items-center">
                     <a href="tel:6476197815" class="bg-slate-900 text-white px-7 py-4 rounded-2xl font-black hover:bg-blue-800 bump transition text-sm shadow-xl shadow-slate-300 whitespace-nowrap">
                         647-619-7815
@@ -99,7 +91,6 @@
         </div>
     </nav>
 
-    <!-- PAGE: HOME -->
     <main id="home-page" class="page-view active">
         <header class="hero-pattern pt-48 pb-32 lg:pt-64 lg:pb-60 relative overflow-hidden text-left">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -137,7 +128,6 @@
             </div>
         </header>
 
-        <!-- Stats -->
         <section class="py-24 bg-white border-y border-slate-50">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
@@ -161,7 +151,6 @@
             </div>
         </section>
 
-        <!-- Why Choose Us -->
         <section class="py-32 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto mb-20">
@@ -170,7 +159,6 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-10">
-                    <!-- Feature 1 -->
                     <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 bump group">
                         <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 text-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                             <i class="fas fa-hand-holding-dollar"></i>
@@ -179,7 +167,6 @@
                         <p class="text-slate-500 font-medium leading-relaxed">We use advanced tax logic to identify every eligible credit, from medical expenses to work-from-home deductions.</p>
                     </div>
 
-                    <!-- Feature 2 -->
                     <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 bump group">
                         <div class="w-16 h-16 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mb-8 text-2xl group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
                             <i class="fas fa-shield-alt"></i>
@@ -188,7 +175,6 @@
                         <p class="text-slate-500 font-medium leading-relaxed">Rest easy. Our rigorous review process ensures total compliance, and we stand by our numbers if the CRA asks questions.</p>
                     </div>
 
-                    <!-- Feature 3 -->
                     <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100 bump group">
                         <div class="w-16 h-16 bg-slate-50 text-slate-800 rounded-2xl flex items-center justify-center mb-8 text-2xl group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300">
                             <i class="fas fa-bolt"></i>
@@ -201,7 +187,6 @@
         </section>
     </main>
 
-    <!-- PAGE: TAX ESTIMATOR -->
     <main id="calculator-page" class="page-view pt-32 pb-24 bg-[#f1f5f9]">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -306,7 +291,6 @@
         </div>
     </main>
 
-    <!-- PAGE: SERVICES -->
     <main id="services-page" class="page-view pt-40 pb-24 text-left">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-32">
@@ -315,7 +299,6 @@
             </div>
             
             <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Service 1 -->
                 <div class="bg-white rounded-[3.5rem] shadow-sm border border-slate-100 bump group overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=1200" alt="Personal Tax" class="service-img group-hover:scale-105 transition duration-700">
                     <div class="p-16">
@@ -330,7 +313,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Service 2 -->
                 <div class="bg-white rounded-[3.5rem] shadow-sm border border-slate-100 bump group overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200" alt="Corporate Strategy" class="service-img group-hover:scale-105 transition duration-700">
                     <div class="p-16">
@@ -349,7 +331,6 @@
         </div>
     </main>
 
-    <!-- PAGE: ABOUT -->
     <main id="about-page" class="page-view pt-40 pb-24 bg-white text-left">
         <div class="max-w-7xl mx-auto px-4">
             <div class="lg:flex lg:items-center lg:space-x-24 mb-32">
@@ -387,7 +368,6 @@
         </div>
     </main>
 
-    <!-- PAGE: FILE TAXES (IFRAME) -->
     <main id="file-taxes-page" class="page-view pt-40 pb-24 bg-[#fcfdfe]">
         <div class="max-w-6xl mx-auto px-4">
             <div class="lg:flex lg:items-center lg:space-x-16 mb-20 text-center lg:text-left">
@@ -406,7 +386,6 @@
         </div>
     </main>
 
-    <!-- PAGE: CONTACT -->
     <main id="contact-page" class="page-view pt-40 pb-24 text-left">
         <div class="max-w-7xl mx-auto px-4">
             <div class="bg-white rounded-[4.5rem] shadow-2xl border border-slate-100 overflow-hidden flex flex-col lg:flex-row text-left bump">
@@ -428,7 +407,9 @@
                     </div>
                 </div>
                 <div class="lg:w-3/5 p-16">
-                    <form id="contactForm" class="space-y-8 font-bold">
+                    <form id="contactForm" name="contact" method="POST" data-netlify="true" class="space-y-8 font-bold">
+                        <input type="hidden" name="form-name" value="contact" />
+                        
                         <div class="grid md:grid-cols-2 gap-8 text-left">
                             <input type="text" name="name" required placeholder="Full Name" class="w-full px-8 py-5 bg-slate-50 rounded-2xl border-none outline-none text-lg shadow-sm">
                             <input type="tel" name="phone" required placeholder="Mobile Number" class="w-full px-8 py-5 bg-slate-50 rounded-2xl border-none outline-none text-lg shadow-sm">
@@ -437,6 +418,7 @@
                         <textarea name="message" rows="4" placeholder="How can we help you?" class="w-full px-8 py-5 bg-slate-50 rounded-2xl border-none outline-none text-lg shadow-sm resize-none"></textarea>
                         <button type="submit" class="w-full bg-blue-700 text-white py-8 rounded-[2.5rem] font-black shadow-2xl hover:bg-blue-800 bump transition text-2xl tracking-wider uppercase">SEND MESSAGE</button>
                     </form>
+
                     <div id="formSuccess" class="hidden text-center p-12 text-slate-900 bg-green-50 rounded-[4rem]">
                         <div class="w-24 h-24 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-8 text-4xl shadow-2xl font-black">✓</div>
                         <h3 class="text-3xl font-black mb-4">Inquiry Received.</h3>
@@ -447,12 +429,10 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-white py-32 border-t border-slate-100 mt-20 text-left">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
             <div class="mb-16 md:mb-0 max-w-sm">
                 <div class="flex items-center space-x-4 mb-8">
-                    <!-- Updated Logo Image in Footer -->
                     <img src="../assets/logo.png" alt="K.S. Tax Logo" class="h-[52px] w-auto">
                     <span class="text-3xl font-black text-slate-900 tracking-tighter uppercase leading-none">K.S. TAX</span>
                 </div>
@@ -490,7 +470,6 @@
         </div>
     </footer>
 
-    <!-- Logic Script -->
     <script>
         function el(id) { return document.getElementById(id); }
 
@@ -608,16 +587,37 @@
             return Math.max(0, Math.round(total));
         }
 
-        const cForm = el('contactForm');
-        if (cForm) {
-            cForm.addEventListener('submit', function(e) {
-                e.preventDefault(); 
-                this.classList.add('hidden');
-                if (el('formSuccess')) el('formSuccess').classList.remove('hidden');
-            });
-        }
+        // Initialize Everything
+        window.addEventListener('DOMContentLoaded', () => {
+            // Run Calculator
+            updateCalculator();
 
-        window.addEventListener('DOMContentLoaded', updateCalculator);
+            // Handle Contact Form via Netlify AJAX
+            const cForm = el('contactForm');
+            if (cForm) {
+                cForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const myForm = e.target;
+                    const formData = new FormData(myForm);
+                    const data = new URLSearchParams(formData).toString();
+
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: data
+                    })
+                    .then(() => {
+                        myForm.classList.add('hidden');
+                        if (el('formSuccess')) el('formSuccess').classList.remove('hidden');
+                    })
+                    .catch((error) => {
+                        alert("Submission failed. Please try again later.");
+                        console.error(error);
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
